@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:background="#FFFFFF"
+    android:layout_height="fill_parent" >
+
+    <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_alignLeft="@+id/badge_icon"
+        android:layout_below="@+id/badge_icon" >
+
+		<RelativeLayout
+		    android:layout_width="fill_parent"
+		    android:layout_height="fill_parent"
+		    android:layout_alignTop="@+id/txtPhone"
+		    android:orientation="vertical" >
+
+			<RelativeLayout
+			    android:id="@+id/relative1"
+			    android:layout_width="match_parent"
+			    android:layout_height="wrap_content" >
+		
+	                <QuickContactBadge
+	                    android:id="@+id/badge_icon"
+	                    android:layout_width="wrap_content"
+	                    android:layout_height="wrap_content"
+	                    android:layout_alignParentLeft="true"
+	                    android:layout_alignParentTop="true"
+	                    android:layout_marginLeft="18dp"
+	                    android:layout_marginTop="18dp"
+	                    android:adjustViewBounds="true"
+	                    android:maxHeight="@dimen/activity_icon_maxheight"
+	                    android:maxWidth="@dimen/activity_icon_maxwidth"
+	                    android:minHeight="@dimen/activity_icon_maxheight"
+	                    android:minWidth="@dimen/activity_icon_maxwidth" />
+				
+				    <EditText
+				        android:id="@+id/editName"
+				        android:layout_width="fill_parent"
+				        android:layout_height="wrap_content"
+				        android:layout_alignBottom="@+id/badge_icon"
+				        android:layout_toRightOf="@+id/badge_icon"
+				        android:ems="10" >
+				
+				    </EditText>
+				            
+	        </RelativeLayout>
+
+			<RelativeLayout
+			    android:id="@+id/relative2"
+			    android:layout_width="match_parent"
+			    android:layout_height="wrap_content"
+			    android:layout_below="@+id/relative1" >
+
+				<TextView
+				    android:id="@+id/textView2"
+				    android:layout_width="wrap_content"
+				    android:layout_height="wrap_content"
+				    android:layout_marginLeft="18dp"
+				    android:textColor="#000000"
+				    android:text="Phone"
+				    android:textAppearance="?android:attr/textAppearanceLarge" />
+
+				<Button
+				    android:id="@+id/btnPAdd"
+				    style="?android:attr/buttonStyleSmall"
+				    android:layout_width="wrap_content"
+				    android:layout_height="wrap_content"
+				    android:layout_alignParentRight="true"
+				    android:layout_alignParentTop="true"
+				    android:minHeight="32dp"
+				    android:minWidth="32dp"
+				    android:text="+" />
+
+				<LinearLayout
+				    android:id="@+id/layout_phone"
+				    android:layout_width="match_parent"
+				    android:layout_height="match_parent"
+				    android:layout_below="@+id/textView2"
+				    android:layout_marginLeft="18dp"
+				    android:orientation="vertical" >
+
+				</LinearLayout>
+
+			</RelativeLayout>
+
+			<RelativeLayout
+			    android:id="@+id/relative3"
+			    android:layout_width="match_parent"
+			    android:layout_height="wrap_content"
+			    android:layout_below="@id/relative2" >
+
+				<TextView
+				    android:id="@+id/textView3"
+				    android:layout_width="wrap_content"
+				    android:layout_height="wrap_content"
+				    android:layout_marginLeft="18dp"
+				    android:textColor="#000000"
+				    android:text="Email"
+				    android:textAppearance="?android:attr/textAppearanceLarge" />
+
+				<Button
+				    android:id="@+id/btnEAdd"
+				    style="?android:attr/buttonStyleSmall"
+				    android:layout_width="wrap_content"
+				    android:layout_height="wrap_content"
+				    android:layout_alignParentLeft="false"
+				    android:layout_alignParentRight="true"
+				    android:layout_alignParentTop="true"
+				    android:minHeight="32dp"
+				    android:minWidth="32dp"
+				
+				    android:text="+" />
+
+				<LinearLayout
+				    android:id="@+id/layout_email"
+				    android:layout_width="match_parent"
+				    android:layout_height="match_parent"
+				    android:layout_below="@id/textView3"
+				    android:layout_marginLeft="18dp"
+				    android:orientation="vertical" >
+
+				</LinearLayout>
+
+			</RelativeLayout>
+
+			<Button
+			    android:id="@+id/btnOK"
+			    android:layout_width="fill_parent"
+			    android:layout_height="wrap_content"
+			    android:layout_below="@+id/btnGroup"
+			    android:text="OK" />
+
+			<Button
+			    android:id="@+id/btnCancel"
+			    android:layout_width="fill_parent"
+			    android:layout_height="wrap_content"
+			    android:layout_alignParentBottom="true"
+			    android:layout_below="@id/btnOK"
+			    android:text="Cancel" />
+
+			<Button
+			    android:id="@+id/btnGroup"
+			    android:layout_width="match_parent"
+			    android:layout_height="wrap_content"
+			    android:layout_alignParentLeft="true"
+			    android:layout_below="@+id/relative3"
+			    android:text="Group>" />
+       
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/btBack" >
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" >
+
+            <TabHost
+                android:id="@+id/tabhost"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical" >
+
+                    <TabWidget
+                        android:id="@android:id/tabs"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" >
+                    </TabWidget>
+
+                    <FrameLayout
+                        android:id="@android:id/tabcontent"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" >
+
+                        <RelativeLayout
+                            android:id="@+id/layout_tab1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent" >
+
+                            <QuickContactBadge
+				                android:id="@+id/info_icon"
+				                android:layout_width="wrap_content"
+				                android:layout_height="wrap_content"
+				                android:layout_alignParentLeft="true"
+				                android:layout_alignParentTop="true"
+				                android:layout_marginLeft="18dp"
+				                android:layout_marginTop="18dp" />
+				
+				            <TextView
+				                android:id="@+id/txtName"
+				                android:layout_width="wrap_content"
+				                android:layout_height="wrap_content"
+				                android:layout_alignTop="@+id/info_icon"
+				                android:layout_centerHorizontal="true"
+				                android:layout_marginTop="16dp"
+				                android:layout_toRightOf="@id/info_icon"
+				                android:text="Large Text"
+				                android:textAppearance="?android:attr/textAppearanceLarge" />
+				
+				            <TextView
+				                android:id="@+id/textView2"
+				                android:layout_width="wrap_content"
+				                android:layout_height="wrap_content"
+				                android:layout_alignLeft="@+id/info_icon"
+				                android:layout_below="@+id/info_icon"
+				                android:layout_marginTop="15dp"
+				                android:text="Phone List"
+				                android:textSize="30sp" />
+				
+				            <TextView
+				                android:id="@+id/textView3"
+				                android:layout_width="wrap_content"
+				                android:layout_height="wrap_content"
+				                android:layout_alignLeft="@+id/layout_phone"
+				                android:layout_below="@+id/layout_phone"
+				                android:text="Email List"
+				                android:textAppearance="?android:attr/textAppearanceLarge"
+				                android:textSize="30sp" />
+
+				            <LinearLayout
+				                android:id="@+id/layout_phone"
+				                android:layout_width="match_parent"
+				                android:layout_height="wrap_content"
+				                android:layout_alignLeft="@+id/textView2"
+				                android:layout_below="@+id/textView2"
+				                android:orientation="vertical" >
+
+				            </LinearLayout>
+
+				            <LinearLayout
+				                android:id="@+id/layout_email"
+				                android:layout_width="match_parent"
+				                android:layout_height="wrap_content"
+				                android:layout_alignLeft="@+id/textView3"
+				                android:layout_below="@+id/textView3"
+				                android:orientation="vertical" >
+
+				            </LinearLayout>
+
+                        </RelativeLayout>
+                        <RelativeLayout
+                            android:id="@+id/layout_tab2"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent" >
+				            
+                            <ListView android:id="@+id/loglist"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                />
+                             
+                        </RelativeLayout>
+                    </FrameLayout>
+                </LinearLayout>
+            </TabHost>
+
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>
